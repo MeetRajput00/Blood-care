@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back7"
+    android:fillViewport="true"
+    tools:context=".profileUser">
+
+
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:blk_blurRadius="3"
+        app:blk_fps="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/colorbg"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/avtar" />
+
+            <TextView
+                android:id="@+id/blood_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:includeFontPadding="false"
+                android:text="Pranav Pawar"
+                android:textColor="@color/colortextfirst"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/holder_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/blood_bank_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:includeFontPadding="false"
+                android:text="Pranav Pawar"
+                android:textColor="@color/colortextsecond"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-60dp"
+            android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/blood"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/blooddrop" />
+
+                    <TextView
+                        android:id="@+id/blood_donated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/blood"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:text="2 lt."
+                        android:textColor="@color/colortextfirst"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/donated_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/blood_donated"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="2 Units"
+                        android:textColor="@color/colortextsecond"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/date"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/date" />
+
+                    <TextView
+                        android:id="@+id/date_donated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/date"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:text="30/09"
+                        android:textColor="@color/colortextfirst"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/donated_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/date_donated"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="2021"
+                        android:textColor="@color/colortextsecond"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/bb_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawableLeft="@drawable/ic_person"
+                    app:drawableTint="@color/colortextfirst"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:hint="Blood Bank Name..."
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <TextView
+                    android:id="@+id/bb_holder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawableLeft="@drawable/ic_person"
+                    app:drawableTint="@color/colortextfirst"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:hint="Holder Name..."
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <TextView
+                    android:id="@+id/bb_mobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/mobiletwo"
+                    android:drawableLeft="@drawable/mobiletwo"
+                    app:drawableTint="@color/colortextfirst"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:hint="@string/mobile_number"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <TextView
+                    android:id="@+id/bb_phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawableLeft="@drawable/ic_phone"
+                    app:drawableTint="@color/colortextfirst"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:hint="@string/phone_number"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <TextView
+                    android:id="@+id/bb_emailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawableLeft="@drawable/ic_email"
+                    app:drawableTint="@color/colortextfirst"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:hint="@string/email_id"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <TextView
+                    android:id="@+id/bb_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_home"
+                    android:drawableLeft="@drawable/ic_home"
+                    app:drawableTint="@color/colortextfirst"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:hint="Bank Location Address..."
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <TextView
+                    android:id="@+id/bb_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_home"
+                    android:drawableLeft="@drawable/ic_home"
+                    app:drawableTint="@color/colortextfirst"
+                    android:drawablePadding="10dp"
+                    android:textSize="18dp"
+                    android:hint="City..."
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/material_500"
+                    android:gravity="center"
+                    android:text="UPDATE"
+                    android:textColor="@color/colortextfirst"
+                    android:textSize="18sp"
+                    app:backgroundTint="@color/colorPrimary" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

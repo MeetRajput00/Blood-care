@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "569312895605",
+    "project_id": "bloodoor-257f2",
+    "storage_bucket": "bloodoor-257f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569312895605:android:fe6838b65fad73c01f0e3c",
+        "android_client_info": {
+          "package_name": "com.example.bloodoor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569312895605-k4m8o4v1mm3kioodp0sd602bkk0iusrc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bloodoor",
+            "certificate_hash": "3f967ae69e40f62e39f4e00eb7aca46bbc1638d2"
+          }
+        },
+        {
+          "client_id": "569312895605-9tm31e5tsgka0mmbucnq9g46jb8ltc67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWjpIPWueHz6KLEdsI2OcmvgT0bxRrWv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569312895605-9tm31e5tsgka0mmbucnq9g46jb8ltc67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

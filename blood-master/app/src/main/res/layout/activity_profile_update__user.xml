@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileUpdate_User">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back7">
+
+        <io.alterac.blurkit.BlurLayout
+            android:id="@+id/blurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:blk_blurRadius="3"
+            app:blk_fps="0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/colorbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/searchDonorIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="Profile"
+                    android:src="@drawable/update_profile" />
+
+                <TextView
+                    android:id="@+id/searchDonorHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baumans"
+                    android:text="Update Profile"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txv_general_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/baumans"
+                    android:text="GENERAL INFORMATION"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colortextfirst"
+                    android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/txv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableStart="@drawable/ic_person"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Enter New Name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/updateFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_bg"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Name..."
+                    android:textColor="@color/black"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+
+                    <TextView
+                        android:id="@+id/txv_mobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/mobiletwo"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Enter New Mobile Number"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"  />
+
+                <EditText
+                    android:id="@+id/updateMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_bg"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Mobile Number..."
+                    android:textColor="@color/black"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+
+                    <TextView
+                        android:id="@+id/txv_emailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_email"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Enter New Mail ID"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"  />
+
+                <EditText
+                    android:id="@+id/updateEmailID"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_bg"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:hint="Enter Email ID..."
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+
+                    <TextView
+                        android:id="@+id/txv_homeAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_home"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Enter New Home Address"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"   />
+
+
+                <EditText
+                    android:id="@+id/updateHomeAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_bg"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:hint="Enter Home Address..."
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/txv_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_pin"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Enter New City Pin Code"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"  />
+
+                <EditText
+                    android:id="@+id/updateCityPincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_bg"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:hint="Enter City Pincode..."
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/txv_DOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Enter Corrected DOB"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"  />
+
+                <EditText
+                    android:id="@+id/updateDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/input_bg"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Date of Birth"
+                    android:textColor="@color/black"
+                    android:inputType="date"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+
+                    <TextView
+                        android:id="@+id/update_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/gender"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Select Correct Gender"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"   />
+
+
+                <RadioGroup
+                    android:id="@+id/update_radio_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/input_bg">
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Female"
+                        android:textColor="@color/colortextfirst"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Male"
+                        android:textColor="@color/colortextfirst"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+
+                    <TextView
+                        android:id="@+id/update_bloodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableStart="@drawable/bloodgroup"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="5dp"
+                        android:text="Select Correct Blood Group"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"   />
+
+
+                <RadioGroup
+                    android:id="@+id/update_radio_bloodGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/input_bg" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_OP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="O+"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_ON"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="O-"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_ABP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="AB+"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_ABN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="AB-"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_AP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="A+"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_AN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="A-"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_BP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="B+"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_BN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="B-"
+                            android:textColor="@color/colortextfirst"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="15dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/buttonback"
+                        android:gravity="center"
+                        android:text="UPDATE"
+                        android:textColor="@color/colortextfirst"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressbar_Update_Profile"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:elevation="18dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back7"
+    tools:context=".create_donation_event">
+
+
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:blk_blurRadius="3"
+        app:blk_fps="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Your code goes here....-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/colorbg"
+                android:padding="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/profileIcon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="10dp"
+                        android:contentDescription="Create Donation Event"
+                        android:src="@drawable/plus" />
+
+                    <TextView
+                        android:id="@+id/userProfileHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/baumans"
+                        android:text="Create Donation \nEvent"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/eventBloodBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/bloodgroup"
+                    android:drawableLeft="@drawable/bloodgroup"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Blood Bank Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+                <EditText
+                    android:id="@+id/eventNGOName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/bloodgroup"
+                    android:drawableLeft="@drawable/bloodgroup"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter NGO Name (optional)"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <EditText
+                    android:id="@+id/eventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/bloodgroup"
+                    android:drawableLeft="@drawable/bloodgroup"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Event Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <EditText
+                    android:id="@+id/eventStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                    android:drawableTint="@color/black"
+                    android:drawableLeft="@drawable/startdate"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Select Start Date"
+                    android:inputType="date"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <EditText
+                    android:id="@+id/eventEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                    android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Select End Date"
+                    android:inputType="date"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <EditText
+                    android:id="@+id/eventDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_note"
+                    android:drawableLeft="@drawable/ic_note"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Description"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <EditText
+                    android:id="@+id/eventDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_time"
+                    android:drawableLeft="@drawable/ic_time"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Time Duration (eg. 12:00::17:59)"
+                    android:importantForAutofill="no"
+                    android:inputType="time"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <EditText
+                    android:id="@+id/eventAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_pin"
+                    android:drawableLeft="@drawable/ic_pin"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Venue address"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <EditText
+                    android:id="@+id/eventPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/input_bg"
+                    android:drawableStart="@drawable/ic_pin"
+                    android:drawableLeft="@drawable/ic_pin"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Enter Venue pin code"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colortextfirst"
+                    android:textColorHint="@color/colortextsecond" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonback"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/createEventButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonback"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="CREATE EVENT"
+        android:textAllCaps="false"
+        android:textColor="@color/colortextfirst"
+        android:textSize="18sp"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <!--    Your code goes here....-->
+</androidx.constraintlayout.widget.ConstraintLayout>
